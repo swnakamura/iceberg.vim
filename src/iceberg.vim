@@ -786,18 +786,17 @@ function! s:create_links() abort
 =======
 
   " Neovim built-in LSP
-  call add(links, pgmnt#hi#link('LspDiagnosticsError',               'ErrorMsg'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsErrorSign',           'ALEErrorSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsErrorFloating',       'ErrorMsg'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsWarning',             'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsWarningSign',         'ALEWarningSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsWarningFloating',     'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsInformation',         'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsInformationSign',     'ALEWarningSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsInformationFloating', 'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsHint',                'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsHintSign',            'ALEWarningSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsHintFloating',        'ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultError',        'ErrorMsg'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsFloatingError',       'ErrorMsg'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultWarning',      'ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignWarning',         'ALEWarningSign'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsFloatingWarning',     'ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultInformation',  'ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignInformation',     'ALEWarningSign'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsFloatingInformation', 'ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultHint',         'ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignHint',            'ALEWarningSign'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsFloatingHint',        'ALEVirtualTextWarning'))
 
   " [zenspace.vim](https://github.com/thinca/vim-zenspace)
   call extend(rules, pgmnt#hi#group(
