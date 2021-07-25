@@ -775,7 +775,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
   call add(links, pgmnt#hi#link('typescriptParens', 'Normal'))
 
-  " Neovim built-in LSP
+  " [Neovim built-in LSP](https://neovim.io/doc/user/lsp.html)
   call add(links, pgmnt#hi#link('LspDiagnosticsDefaultError','ErrorMsg'))
   call add(links, pgmnt#hi#link('LspDiagnosticsDefaultWarning','ALEVirtualTextWarning'))
   call add(links, pgmnt#hi#link('LspDiagnosticsDefaultInformation','ALEVirtualTextWarning'))
@@ -784,6 +784,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('LspDiagnosticsSignWarning','ALEWarningSign'))
   call add(links, pgmnt#hi#link('LspDiagnosticsSignInformation','ALEWarningSign'))
   call add(links, pgmnt#hi#link('LspDiagnosticsSignHint','ALEWarningSign'))
+  " }}}
 
   return links
 endfunction
