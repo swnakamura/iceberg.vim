@@ -774,38 +774,16 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('typescriptMessage', 'Normal'))
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
   call add(links, pgmnt#hi#link('typescriptParens', 'Normal'))
-<<<<<<< HEAD
-||||||| parent of 5755baa (Add basic support for neovim's built-in LSP)
-
-  " [zenspace.vim](https://github.com/thinca/vim-zenspace)
-  call extend(rules, pgmnt#hi#group(
-        \ 'ZenSpace', {
-        \   'ctermbg': c.red,
-        \   'guibg': g.red,
-        \ }))
-=======
 
   " Neovim built-in LSP
-  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultError',        'ErrorMsg'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsFloatingError',       'ErrorMsg'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultWarning',      'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsSignWarning',         'ALEWarningSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsFloatingWarning',     'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultInformation',  'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsSignInformation',     'ALEWarningSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsFloatingInformation', 'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultHint',         'ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsSignHint',            'ALEWarningSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsFloatingHint',        'ALEVirtualTextWarning'))
-
-  " [zenspace.vim](https://github.com/thinca/vim-zenspace)
-  call extend(rules, pgmnt#hi#group(
-        \ 'ZenSpace', {
-        \   'ctermbg': c.red,
-        \   'guibg': g.red,
-        \ }))
->>>>>>> 5755baa (Add basic support for neovim's built-in LSP)
-  " }}}
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultError','ErrorMsg'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultWarning','ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultInformation','ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultHint','ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignError','ALEErrorSign'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignWarning','ALEWarningSign'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignInformation','ALEWarningSign'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignHint','ALEWarningSign'))
 
   return links
 endfunction
