@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-07-23 21:45+0900
+" Modified:   2021-07-25 19:27+0900
 " License:    MIT
 
 
@@ -372,18 +372,15 @@ hi! link typescriptMessage Normal
 hi! link typescriptNull Constant
 hi! link typescriptParens Normal
 
-hi! link LspDiagnosticsError ErrorMsg
-hi! link LspDiagnosticsErrorSign ALEErrorSign
-hi! link LspDiagnosticsErrorFloating ErrorMsg
-hi! link LspDiagnosticsWarning ALEVirtualTextWarning
-hi! link LspDiagnosticsWarningSign ALEWarningSign
-hi! link LspDiagnosticsWarningFloating ALEVirtualTextWarning
-hi! link LspDiagnosticsInformation ALEVirtualTextWarning
-hi! link LspDiagnosticsInformationSign ALEWarningSign
-hi! link LspDiagnosticsInformationFloating ALEVirtualTextWarning
-hi! link LspDiagnosticsHint ALEVirtualTextWarning
-hi! link LspDiagnosticsHintSign ALEWarningSign
-hi! link LspDiagnosticsHintFloating ALEVirtualTextWarning
+hi! link LspDiagnosticsDefaultError ErrorMsg
+hi! link LspDiagnosticsDefaultWarning ALEVirtualTextWarning
+hi! link LspDiagnosticsDefaultInformation ALEVirtualTextWarning
+hi! link LspDiagnosticsDefaultHint ALEVirtualTextWarning
+
+hi! link LspDiagnosticsSignError ALEErrorSign
+hi! link LspDiagnosticsSignWarning ALEWarningSign
+hi! link LspDiagnosticsSignInformation ALEWarningSign
+hi! link LspDiagnosticsSignHint ALEWarningSign
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
