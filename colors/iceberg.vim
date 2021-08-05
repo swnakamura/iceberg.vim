@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-07-25 20:47+0900
+" Modified:   2021-08-05 19:28+0900
 " License:    MIT
 
 
@@ -113,6 +113,10 @@ if &background == 'light'
   hi SyntasticStyleWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi SyntasticWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi ZenSpace ctermbg=125 guibg=#cc517a
+  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
+  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
+  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
+  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=125 gui=underline guifg=#cc517a term=underline
   hi icebergALAccentRed ctermfg=125 guifg=#cc517a
 
   if has('nvim')
@@ -228,6 +232,10 @@ else
   hi SyntasticStyleWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi SyntasticWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi ZenSpace ctermbg=203 guibg=#e27878
+  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
+  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
+  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
+  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=203 gui=underline guifg=#e27878 term=underline
   hi icebergALAccentRed ctermfg=203 guifg=#e27878
 
   if has('nvim')
@@ -371,7 +379,7 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage Normal
 hi! link typescriptNull Constant
 hi! link typescriptParens Normal
-hi! link LspDiagnosticsDefaultError ErrorMsg
+hi! link LspDiagnosticsDefaultError ALEVirtualTextError
 hi! link LspDiagnosticsDefaultWarning ALEVirtualTextWarning
 hi! link LspDiagnosticsDefaultInformation ALEVirtualTextWarning
 hi! link LspDiagnosticsDefaultHint ALEVirtualTextWarning
