@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-11-03 08:51+0900
+" Modified:   2021-11-03 22:17+0900
 " License:    MIT
 
 
@@ -113,14 +113,30 @@ if &background == 'light'
   hi SyntasticStyleWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi SyntasticWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi ZenSpace ctermbg=125 guibg=#cc517a
-  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
-  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
-  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
-  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=125 gui=underline guifg=#cc517a term=underline
-  hi DiagnosticUnderlineInformation cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
-  hi DiagnosticUnderlineHint cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
-  hi DiagnosticUnderlineWarning cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
-  hi DiagnosticUnderlineError cterm=underline ctermfg=125 gui=underline guifg=#cc517a term=underline
+  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=25 gui=underline guisp=#2d539e term=underline
+  hi LspDiagnosticsDefaultInformation ctermfg=25 guifg=#2d539e
+  hi LspDiagnosticsSignInformation ctermbg=253 ctermfg=25 guibg=#dcdfe7 guifg=#2d539e
+  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=248 gui=underline guisp=#9fa7bd term=underline
+  hi LspDiagnosticsDefaultHint ctermfg=248 guifg=#9fa7bd
+  hi LspDiagnosticsSignHint ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
+  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=130 gui=underline guisp=#c57339 term=underline
+  hi LspDiagnosticsDefaultWarning ctermfg=130 guifg=#c57339
+  hi LspDiagnosticsSignWarning ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
+  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=125 gui=underline guisp=#cc517a term=underline
+  hi LspDiagnosticsDefaultError ctermfg=125 guifg=#cc517a
+  hi LspDiagnosticsSignError ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
+  hi DiagnosticUnderlineInformation cterm=underline ctermfg=25 gui=underline guisp=#2d539e term=underline
+  hi DiagnosticInformation ctermfg=25 guifg=#2d539e
+  hi DiagnosticSignInformation ctermbg=253 ctermfg=25 guibg=#dcdfe7 guifg=#2d539e
+  hi DiagnosticUnderlineHint cterm=underline ctermfg=248 gui=underline guisp=#9fa7bd term=underline
+  hi DiagnosticHint ctermfg=248 guifg=#9fa7bd
+  hi DiagnosticSignHint ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
+  hi DiagnosticUnderlineWarning cterm=underline ctermfg=130 gui=underline guisp=#c57339 term=underline
+  hi DiagnosticWarning ctermfg=130 guifg=#c57339
+  hi DiagnosticSignWarning ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
+  hi DiagnosticUnderlineError cterm=underline ctermfg=125 gui=underline guisp=#cc517a term=underline
+  hi DiagnosticError ctermfg=125 guifg=#cc517a
+  hi DiagnosticSignError ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
   hi icebergALAccentRed ctermfg=125 guifg=#cc517a
 
   if has('nvim')
@@ -236,14 +252,30 @@ else
   hi SyntasticStyleWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi SyntasticWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi ZenSpace ctermbg=203 guibg=#e27878
-  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
-  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
-  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
-  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=203 gui=underline guifg=#e27878 term=underline
-  hi DiagnosticUnderlineInformation cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
-  hi DiagnosticUnderlineHint cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
-  hi DiagnosticUnderlineWarning cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
-  hi DiagnosticUnderlineError cterm=underline ctermfg=203 gui=underline guifg=#e27878 term=underline
+  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=110 gui=underline guisp=#84a0c6 term=underline
+  hi LspDiagnosticsDefaultInformation ctermfg=110 guifg=#84a0c6
+  hi LspDiagnosticsSignInformation ctermbg=235 ctermfg=110 guibg=#1e2132 guifg=#84a0c6
+  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=239 gui=underline guisp=#444b71 term=underline
+  hi LspDiagnosticsDefaultHint ctermfg=239 guifg=#444b71
+  hi LspDiagnosticsSignHint ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
+  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=216 gui=underline guisp=#e2a478 term=underline
+  hi LspDiagnosticsDefaultWarning ctermfg=216 guifg=#e2a478
+  hi LspDiagnosticsSignWarning ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
+  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=203 gui=underline guisp=#e27878 term=underline
+  hi LspDiagnosticsDefaultError ctermfg=203 guifg=#e27878
+  hi LspDiagnosticsSignError ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
+  hi DiagnosticUnderlineInformation cterm=underline ctermfg=110 gui=underline guisp=#84a0c6 term=underline
+  hi DiagnosticInformation ctermfg=110 guifg=#84a0c6
+  hi DiagnosticSignInformation ctermbg=235 ctermfg=110 guibg=#1e2132 guifg=#84a0c6
+  hi DiagnosticUnderlineHint cterm=underline ctermfg=239 gui=underline guisp=#444b71 term=underline
+  hi DiagnosticHint ctermfg=239 guifg=#444b71
+  hi DiagnosticSignHint ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
+  hi DiagnosticUnderlineWarning cterm=underline ctermfg=216 gui=underline guisp=#e2a478 term=underline
+  hi DiagnosticWarning ctermfg=216 guifg=#e2a478
+  hi DiagnosticSignWarning ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
+  hi DiagnosticUnderlineError cterm=underline ctermfg=203 gui=underline guisp=#e27878 term=underline
+  hi DiagnosticError ctermfg=203 guifg=#e27878
+  hi DiagnosticSignError ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
   hi icebergALAccentRed ctermfg=203 guifg=#e27878
 
   if has('nvim')
@@ -387,22 +419,6 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage Normal
 hi! link typescriptNull Constant
 hi! link typescriptParens Normal
-hi! link LspDiagnosticsDefaultError ALEVirtualTextError
-hi! link LspDiagnosticsDefaultWarning ALEVirtualTextWarning
-hi! link LspDiagnosticsDefaultInformation ALEVirtualTextWarning
-hi! link LspDiagnosticsDefaultHint ALEVirtualTextWarning
-hi! link LspDiagnosticsSignError ALEErrorSign
-hi! link LspDiagnosticsSignWarning ALEWarningSign
-hi! link LspDiagnosticsSignInformation ALEWarningSign
-hi! link LspDiagnosticsSignHint ALEWarningSign
-hi! link DiagnosticError ALEVirtualTextError
-hi! link DiagnosticWarning ALEVirtualTextWarning
-hi! link DiagnosticInformation ALEVirtualTextWarning
-hi! link DiagnosticHint ALEVirtualTextWarning
-hi! link DiagnosticSignError ALEErrorSign
-hi! link DiagnosticSignWarning ALEWarningSign
-hi! link DiagnosticSignInformation ALEWarningSign
-hi! link DiagnosticSignHint ALEWarningSign
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
