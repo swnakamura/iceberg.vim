@@ -1,27 +1,29 @@
 function! iceberg#palette#dark#create() abort
-  let hue_base = 230
+  let hue_base = 55
 
-  let hue_red = 0
+  let hue_red = 20
   let hue_orange = 25
-  let hue_green = 70
+  let hue_lgreen = 107
   let hue_lblue = 190
   let hue_blue = 215
-  let hue_purple = 255
+  let hue_green = 74
+  let hue_purple = 340
 
   " gui {{{
   let g = {}
 
   " palette
-  let g.blue   = pgmnt#color#hsl(hue_blue,   0.37, 0.65)
-  let g.green  = pgmnt#color#hsl(hue_green,  0.32, 0.63)
-  let g.lblue  = pgmnt#color#hsl(hue_lblue,  0.32, 0.65)
+  let g.blue   = pgmnt#color#hsl(hue_blue,   0.60, 0.37)
+  let g.green  = pgmnt#color#hsl(hue_green,  0.60, 0.37)
+  let g.lgreen = pgmnt#color#hsl(hue_lgreen, 0.37, 0.45)
+  let g.lblue  = pgmnt#color#hsl(hue_lblue,  0.37, 0.45)
   let g.orange = pgmnt#color#hsl(hue_orange, 0.65, 0.68)
-  let g.purple = pgmnt#color#hsl(hue_purple, 0.32, 0.68)
-  let g.red    = pgmnt#color#hsl(hue_red,    0.65, 0.68)
+  let g.purple = pgmnt#color#hsl(hue_purple, 0.20, 0.52)
+  let g.red    = pgmnt#color#hsl(hue_red,    0.55, 0.47)
 
   " normal
-  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.20, 0.11)
-  let g.normal_fg = pgmnt#color#hsl(hue_base, 0.10, 0.80)
+  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.12, 0.12)
+  let g.normal_fg = pgmnt#color#hsl(hue_base, 0.12, 0.75)
 
   " tint
   let g.blue_tint_bg   = pgmnt#color#mix(g.blue, g.normal_bg, 0.30)
@@ -80,8 +82,8 @@ function! iceberg#palette#dark#create() abort
         \ })
   let g.matchparen_bg = pgmnt#color#lighten(g.normal_bg, 0.20)
   let g.matchparen_fg = pgmnt#color#lighten(g.normal_fg, 0.50)
-  let g.search_bg = pgmnt#color#hsl(hue_orange, 0.65, 0.70)
-  let g.search_fg = pgmnt#color#hsl(hue_orange, 0.50, 0.15)
+  let g.search_bg = pgmnt#color#hsl(hue_orange, 0.65, 0.30)
+  let g.search_fg = pgmnt#color#hsl(hue_orange, 0.50, 0.70)
   let g.specialkey_fg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
         \   'saturation': +0.10,
@@ -145,6 +147,7 @@ function! iceberg#palette#dark#create() abort
   " palette
   let c.blue = 110
   let c.green = 150
+  let c.lgreen = 150
   let c.lblue = 109
   let c.orange = 216
   let c.purple = 140

@@ -128,14 +128,14 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Function', {
-        \   'ctermfg': c.blue,
-        \   'guifg': g.blue,
+        \   'ctermfg': c.green,
+        \   'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Identifier', {
         \   'cterm': 'NONE',
-        \   'ctermfg': c.lblue,
-        \   'guifg': g.lblue,
+        \   'ctermfg': c.lgreen,
+        \   'guifg': g.lgreen,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Ignore', {
@@ -146,8 +146,8 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Include', {
-        \   'ctermfg': c.blue,
-        \   'guifg': g.blue,
+        \   'ctermfg': c.green,
+        \   'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'IncSearch', {
@@ -183,8 +183,8 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Operator', {
-        \   'ctermfg': c.blue,
-        \   'guifg': g.blue,
+        \   'ctermfg': c.green,
+        \   'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Pmenu', {
@@ -289,9 +289,9 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Statement', {
-        \   'ctermfg': c.blue,
+        \   'ctermfg': c.green,
         \   'gui': 'NONE',
-        \   'guifg': g.blue,
+        \   'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['StatusLine', 'StatusLineTerm'], {
@@ -314,18 +314,18 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'StorageClass', {
-        \     'ctermfg': c.blue,
-        \     'guifg': g.blue,
+        \     'ctermfg': c.green,
+        \     'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'String', {
-        \   'ctermfg': c.lblue,
-        \   'guifg': g.lblue,
+        \   'ctermfg': c.lgreen,
+        \   'guifg': g.lgreen,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Structure', {
-        \   'ctermfg': c.blue,
-        \   'guifg': g.blue,
+        \   'ctermfg': c.green,
+        \   'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'TabLine', {
@@ -376,16 +376,16 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Type', {
-        \   'ctermfg': c.blue,
+        \   'ctermfg': c.green,
         \   'gui': 'NONE',
-        \   'guifg': g.blue,
+        \   'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Underlined', {
         \   'cterm': 'underline',
-        \   'ctermfg': c.blue,
+        \   'ctermfg': c.green,
         \   'gui': 'underline',
-        \   'guifg': g.blue,
+        \   'guifg': g.green,
         \   'term': 'underline',
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -850,8 +850,6 @@ endfunction
 function! s:create_context() abort
   let d = s:create_colors(
         \ iceberg#palette#dark#create())
-  let l = s:create_colors(
-        \ iceberg#palette#light#create())
   let links = s:create_links()
 
   return {
@@ -859,9 +857,6 @@ function! s:create_context() abort
         \   'dark_rules': d.rules,
         \   'dark_neovim_term_defs': d.neovim_term_defs,
         \   'dark_vim_term_defs': d.vim_term_defs,
-        \   'light_rules': l.rules,
-        \   'light_neovim_term_defs': l.neovim_term_defs,
-        \   'light_vim_term_defs': l.vim_term_defs,
         \   'links': links,
         \ }
 endfunction
