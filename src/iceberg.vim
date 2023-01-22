@@ -575,12 +575,12 @@ function! s:create_colors(palette) abort
 
   " [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
   call extend(rules, pgmnt#hi#group(
-        \ ['TSFunction', 'TSFunctionBuiltin', 'TSFunctionMacro'], {
-        \   'ctermfg': c.pale,
-        \   'guifg': g.pale,
+        \ ['TSFunction', 'TSFunctionBuiltin', 'TSFunctionMacro', 'TSMethod'], {
+        \   'ctermfg': c.orange,
+        \   'guifg': g.orange,
         \ }))
   call extend(rules, pgmnt#hi#group(
-        \ ['TSMethod'], {
+        \ ['TSCall'], {
         \   'ctermfg': c.pale,
         \   'guifg': g.pale,
         \ }))
@@ -835,7 +835,6 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('TSBoolean', 'Constant'))
   call add(links, pgmnt#hi#link('TSCharacter', 'Constant'))
   call add(links, pgmnt#hi#link('TSComment', 'Comment'))
-  call add(links, pgmnt#hi#link('TSConstructor', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('TSConditional', 'Statement'))
   call add(links, pgmnt#hi#link('TSConstant', 'Constant'))
   call add(links, pgmnt#hi#link('TSConstBuiltin', 'Constant'))
@@ -866,8 +865,8 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('TSTagDelimiter', 'htmlTagName'))
   call add(links, pgmnt#hi#link('TSText', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('TSTitle', 'Title'))
-  call add(links, pgmnt#hi#link('TSType', 'Type'))
-  call add(links, pgmnt#hi#link('TSTypeBuiltin', 'Type'))
+  call add(links, pgmnt#hi#link('TSType', 'Special'))
+  call add(links, pgmnt#hi#link('TSTypeBuiltin', 'Special'))
   call add(links, pgmnt#hi#link('TSVariable', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('TSVariableBuiltin', 'Statement'))
 
@@ -906,13 +905,15 @@ function! s:create_neovim_08_links() abort
   call add(links, pgmnt#hi#link('@field', 'TSField'))
   call add(links, pgmnt#hi#link('@float', 'TSFloat'))
   call add(links, pgmnt#hi#link('@function', 'TSFunction'))
-  call add(links, pgmnt#hi#link('@function.builtin', 'TSFunctionBuiltin'))
+  call add(links, pgmnt#hi#link('@function.call', 'TSCall'))
+  call add(links, pgmnt#hi#link('@function.builtin', 'TSCall'))
   call add(links, pgmnt#hi#link('@function.macro', 'TSFunctionMacro'))
   call add(links, pgmnt#hi#link('@include', 'TSInclude'))
   call add(links, pgmnt#hi#link('@keyword', 'TSKeyword'))
   call add(links, pgmnt#hi#link('@keyword.function', 'TSKeywordFunction'))
   call add(links, pgmnt#hi#link('@label', 'TSLabel'))
   call add(links, pgmnt#hi#link('@method', 'TSMethod'))
+  call add(links, pgmnt#hi#link('@method.call', 'TSCall'))
   call add(links, pgmnt#hi#link('@namespace', 'TSNamespace'))
   call add(links, pgmnt#hi#link('@number', 'TSNumber'))
   call add(links, pgmnt#hi#link('@operator', 'TSOperator'))

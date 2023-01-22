@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2022-11-16 22:13+0900
+" Modified:   2023-01-23 10:26+0900
 " License:    MIT
 
 
@@ -114,10 +114,11 @@ if &background == 'light'
   hi SyntasticStyleWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi SyntasticWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi ZenSpace ctermbg=125 guibg=#cc517a
-  hi TSFunction ctermfg=237 guifg=#505695
-  hi TSFunctionBuiltin ctermfg=237 guifg=#505695
-  hi TSFunctionMacro ctermfg=237 guifg=#505695
-  hi TSMethod ctermfg=237 guifg=#505695
+  hi TSFunction ctermfg=130 guifg=#c57339
+  hi TSFunctionBuiltin ctermfg=130 guifg=#c57339
+  hi TSFunctionMacro ctermfg=130 guifg=#c57339
+  hi TSMethod ctermfg=130 guifg=#c57339
+  hi TSCall ctermfg=237 guifg=#505695
   hi TSURI cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=31 gui=underline guisp=#3f83a6 term=underline
   hi DiagnosticInfo ctermfg=31 guifg=#3f83a6
@@ -248,10 +249,11 @@ else
   hi SyntasticStyleWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi SyntasticWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi ZenSpace ctermbg=203 guibg=#e27878
-  hi TSFunction ctermfg=252 guifg=#a3adcb
-  hi TSFunctionBuiltin ctermfg=252 guifg=#a3adcb
-  hi TSFunctionMacro ctermfg=252 guifg=#a3adcb
-  hi TSMethod ctermfg=252 guifg=#a3adcb
+  hi TSFunction ctermfg=216 guifg=#e2a478
+  hi TSFunctionBuiltin ctermfg=216 guifg=#e2a478
+  hi TSFunctionMacro ctermfg=216 guifg=#e2a478
+  hi TSMethod ctermfg=216 guifg=#e2a478
+  hi TSCall ctermfg=252 guifg=#a3adcb
   hi TSURI cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=109 gui=underline guisp=#89b8c2 term=underline
   hi DiagnosticInfo ctermfg=109 guifg=#89b8c2
@@ -403,7 +405,6 @@ hi! link TSAttribute Special
 hi! link TSBoolean Constant
 hi! link TSCharacter Constant
 hi! link TSComment Comment
-hi! link TSConstructor icebergNormalFg
 hi! link TSConditional Statement
 hi! link TSConstant Constant
 hi! link TSConstBuiltin Constant
@@ -434,8 +435,8 @@ hi! link TSTagAttribute htmlArg
 hi! link TSTagDelimiter htmlTagName
 hi! link TSText icebergNormalFg
 hi! link TSTitle Title
-hi! link TSType Type
-hi! link TSTypeBuiltin Type
+hi! link TSType Special
+hi! link TSTypeBuiltin Special
 hi! link TSVariable icebergNormalFg
 hi! link TSVariableBuiltin Statement
 hi! link typescriptAjaxMethods icebergNormalFg
@@ -464,13 +465,15 @@ if has('nvim-0.8')
   hi! link @field TSField
   hi! link @float TSFloat
   hi! link @function TSFunction
-  hi! link @function.builtin TSFunctionBuiltin
+  hi! link @function.call TSCall
+  hi! link @function.builtin TSCall
   hi! link @function.macro TSFunctionMacro
   hi! link @include TSInclude
   hi! link @keyword TSKeyword
   hi! link @keyword.function TSKeywordFunction
   hi! link @label TSLabel
   hi! link @method TSMethod
+  hi! link @method.call TSCall
   hi! link @namespace TSNamespace
   hi! link @number TSNumber
   hi! link @operator TSOperator
