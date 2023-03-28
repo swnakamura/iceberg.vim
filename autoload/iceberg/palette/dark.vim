@@ -74,7 +74,11 @@ function! iceberg#palette#dark#create() abort
   " misc
   let g.comment_fg = pgmnt#color#hsl(hue_base, 0.12, 0.48)
   let g.cursorline_bg = g.linenr_bg
-  let g.folded_bg = g.linenr_bg
+  let g.folded_bg = pgmnt#color#adjust_color(
+        \g.normal_bg, {
+        \    'saturation': +0.05,
+        \    'lightness': +0.05,
+        \ })
   let g.folded_fg = pgmnt#color#adjust_color(
         \ g.folded_bg, {
         \   'saturation': -0.05,
