@@ -143,6 +143,9 @@ function! iceberg#palette#dark#create() abort
 
   " plugins
   let g.easymotion_shade_fg = pgmnt#color#hsl(hue_base, 0.20, 0.30)
+
+  " Let the normal background transparent
+  let g.normal_bg = 'NONE'
   " }}}
 
   " cterm {{{

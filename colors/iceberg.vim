@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2023-02-12 22:09+0900
+" Modified:   2023-12-26 15:34+0900
 " License:    MIT
 
 
@@ -21,14 +21,14 @@ endif
 let g:colors_name = 'iceberg'
 
 if &background == 'light'
-  hi Normal ctermbg=254 ctermfg=237 guibg=#e8e9ec guifg=#33374c
+  hi Normal ctermbg=254 ctermfg=237 guibg=NONE guifg=#33374c
   hi ColorColumn cterm=NONE ctermbg=253 ctermfg=NONE guibg=#dcdfe7 guifg=NONE
   hi CursorColumn cterm=NONE ctermbg=253 ctermfg=NONE guibg=#dcdfe7 guifg=NONE
   hi CursorLine cterm=NONE ctermbg=253 ctermfg=NONE guibg=#dcdfe7 guifg=NONE
   hi Comment ctermfg=244 guifg=#8389a3
-  hi Conceal ctermbg=254 ctermfg=244 guibg=#e8e9ec guifg=#8389a3
+  hi Conceal ctermbg=254 ctermfg=244 guibg=NONE guifg=#8389a3
   hi Constant ctermfg=97 guifg=#7759b4
-  hi Cursor ctermbg=237 ctermfg=254 guibg=#33374c guifg=#e8e9ec
+  hi Cursor ctermbg=237 ctermfg=254 guibg=#33374c guifg=NONE
   hi CursorLineNr cterm=NONE ctermbg=251 ctermfg=237 guibg=#cad0de guifg=#576a9e
   hi Delimiter ctermfg=237 guifg=#33374c
   hi DiffAdd ctermbg=79 ctermfg=23 guibg=#d4dbd1 guifg=#475946
@@ -36,9 +36,9 @@ if &background == 'light'
   hi DiffDelete cterm=NONE ctermbg=181 ctermfg=89 gui=NONE guibg=#e3d2da guifg=#70415e
   hi DiffText cterm=NONE ctermbg=73 ctermfg=24 gui=NONE guibg=#acc5d3 guifg=#33374c
   hi Directory ctermfg=31 guifg=#3f83a6
-  hi Error ctermbg=254 ctermfg=125 guibg=#e8e9ec guifg=#cc517a
-  hi ErrorMsg ctermbg=254 ctermfg=125 guibg=#e8e9ec guifg=#cc517a
-  hi WarningMsg ctermbg=254 ctermfg=125 guibg=#e8e9ec guifg=#cc517a
+  hi Error ctermbg=254 ctermfg=125 guibg=NONE guifg=#cc517a
+  hi ErrorMsg ctermbg=254 ctermfg=125 guibg=NONE guifg=#cc517a
+  hi WarningMsg ctermbg=254 ctermfg=125 guibg=NONE guifg=#cc517a
   hi EndOfBuffer ctermfg=251 guifg=#cbcfda
   hi NonText ctermfg=251 guifg=#cbcfda
   hi Whitespace ctermfg=251 guifg=#cbcfda
@@ -80,7 +80,7 @@ if &background == 'light'
   hi TabLine cterm=NONE ctermbg=251 ctermfg=244 gui=NONE guibg=#cad0de guifg=#8b98b6
   hi TabLineFill cterm=reverse ctermbg=244 ctermfg=251 gui=reverse guibg=#8b98b6 guifg=#cad0de
   hi TabLineSel cterm=NONE ctermbg=254 ctermfg=237 gui=NONE guibg=#e8e9ec guifg=#606374
-  hi TermCursorNC ctermbg=244 ctermfg=254 guibg=#8389a3 guifg=#e8e9ec
+  hi TermCursorNC ctermbg=244 ctermfg=254 guibg=#8389a3 guifg=NONE
   hi Title ctermfg=130 gui=NONE guifg=#c57339
   hi Todo ctermbg=254 ctermfg=64 guibg=#d4dbd1 guifg=#668e3d
   hi Type ctermfg=25 gui=NONE guifg=#2d539e
@@ -107,7 +107,7 @@ if &background == 'light'
   hi GitGutterDelete ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
   hi gitmessengerEndOfBuffer ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
   hi gitmessengerPopupNormal ctermbg=253 ctermfg=237 guibg=#dcdfe7 guifg=#33374c
-  hi Sneak ctermbg=97 ctermfg=254 guibg=#7759b4 guifg=#e8e9ec
+  hi Sneak ctermbg=97 ctermfg=254 guibg=#7759b4 guifg=NONE
   hi SneakScope ctermbg=251 ctermfg=244 guibg=#c9cdd7 guifg=#8389a3
   hi SyntasticErrorSign ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
   hi SyntasticStyleErrorSign ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
@@ -156,14 +156,14 @@ if &background == 'light'
     let g:terminal_ansi_colors = ['#dcdfe7', '#cc517a', '#668e3d', '#c57339', '#2d539e', '#7759b4', '#3f83a6', '#33374c', '#8389a3', '#cc3768', '#598030', '#b6662d', '#22478e', '#6845ad', '#327698', '#262a3f']
   endif
 else
-  hi Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=#c6c8d1
+  hi Normal ctermbg=234 ctermfg=252 guibg=NONE guifg=#c6c8d1
   hi ColorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
   hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
   hi CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
   hi Comment ctermfg=242 guifg=#6b7089
-  hi Conceal ctermbg=234 ctermfg=242 guibg=#161821 guifg=#6b7089
+  hi Conceal ctermbg=234 ctermfg=242 guibg=NONE guifg=#6b7089
   hi Constant ctermfg=140 guifg=#a093c7
-  hi Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=#161821
+  hi Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=NONE
   hi CursorLineNr cterm=NONE ctermbg=237 ctermfg=253 guibg=#2a3158 guifg=#cdd1e6
   hi Delimiter ctermfg=252 guifg=#c6c8d1
   hi DiffAdd ctermbg=29 ctermfg=158 guibg=#45493e guifg=#c0c5b9
@@ -171,13 +171,13 @@ else
   hi DiffDelete cterm=NONE ctermbg=95 ctermfg=224 gui=NONE guibg=#53343b guifg=#ceb0b6
   hi DiffText cterm=NONE ctermbg=30 ctermfg=195 gui=NONE guibg=#5b7881 guifg=#c6c8d1
   hi Directory ctermfg=109 guifg=#89b8c2
-  hi Error ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
-  hi ErrorMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
-  hi WarningMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
+  hi Error ctermbg=234 ctermfg=203 guibg=NONE guifg=#e27878
+  hi ErrorMsg ctermbg=234 ctermfg=203 guibg=NONE guifg=#e27878
+  hi WarningMsg ctermbg=234 ctermfg=203 guibg=NONE guifg=#e27878
   hi EndOfBuffer ctermfg=236 guifg=#242940
   hi NonText ctermfg=236 guifg=#242940
   hi Whitespace ctermfg=236 guifg=#242940
-  hi Folded ctermbg=235 ctermfg=245 guibg=#181b28 guifg=#616a91
+  hi Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
   hi FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
   hi Function ctermfg=110 guifg=#84a0c6
   hi Identifier cterm=NONE ctermfg=109 guifg=#89b8c2
@@ -215,7 +215,7 @@ else
   hi TabLine cterm=NONE ctermbg=233 ctermfg=238 gui=NONE guibg=#0f1117 guifg=#3e445e
   hi TabLineFill cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#3e445e guifg=#0f1117
   hi TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#161821 guifg=#9a9ca5
-  hi TermCursorNC ctermbg=242 ctermfg=234 guibg=#6b7089 guifg=#161821
+  hi TermCursorNC ctermbg=242 ctermfg=234 guibg=#6b7089 guifg=NONE
   hi Title ctermfg=216 gui=NONE guifg=#e2a478
   hi Todo ctermbg=234 ctermfg=150 guibg=#45493e guifg=#b4be82
   hi Type ctermfg=110 gui=NONE guifg=#84a0c6
@@ -242,7 +242,7 @@ else
   hi GitGutterDelete ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
   hi gitmessengerEndOfBuffer ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
   hi gitmessengerPopupNormal ctermbg=235 ctermfg=252 guibg=#1e2132 guifg=#c6c8d1
-  hi Sneak ctermbg=140 ctermfg=234 guibg=#a093c7 guifg=#161821
+  hi Sneak ctermbg=140 ctermfg=234 guibg=#a093c7 guifg=NONE
   hi SneakScope ctermbg=236 ctermfg=242 guibg=#272c42 guifg=#6b7089
   hi SyntasticErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
   hi SyntasticStyleErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
